@@ -40,18 +40,9 @@ def miNombreEs(self, nombre):
 
 
 def probandoTemplate(self):
-                #ojo acá tienen que poner la dirección de su archivo, no el mío, les dejo el directorio como ejemplo pero cambienlo
-    miHtml = open("C:/Users/garumani/Desktop/django/Proyecto1/Proyecto1/plantillas/template1.html")
-
-    plantilla = Template(miHtml.read()) #Se carga en memoria nuestro documento, template1   
-    ##OJO importar template y contex, con: from django.template import Template, Context
-
-    miHtml.close() #Cerramos el archivo
-
-    miContexto = Context() #EN este caso no hay nada ya que no hay parametros, IGUAL hay que crearlo
-
-    documento = plantilla.render(miContexto) #Aca renderizamos la plantilla en documento
-
+    miHtml = open("C:/Users/garun/Desktop/ProyectoCoder/Proyecto1/plantillas/template1.html")
+    plantilla = Template(miHtml.read())  
+    miHtml.close()
+    miContexto = Context()
+    documento = plantilla.render(miContexto)
     return HttpResponse(documento)
-
-#C:\Users\garumani\Desktop\django\Proyecto1\Proyecto1\plantillas\template1.html
