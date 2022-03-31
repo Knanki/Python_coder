@@ -2,6 +2,7 @@ from django.http import HttpResponse
 import datetime
 from datetime import date
 from django.template import Template, Context
+from django.template import loader 
 
 def saludo(request):   #Nuestra primera vista :) 
 	return HttpResponse("Hola Django - Coder")
