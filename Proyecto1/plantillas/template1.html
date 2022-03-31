@@ -7,9 +7,21 @@
     <title>Document</title>
 </head>
 <body>
+<div>
+    <h1>Excelente!!!.... Es muy facíl usar plantillas.</h1>
 
+    <p style="color:rgb(46, 12, 238)">Mi nombres es: {{nombre}}</p>
+    <p style="color:rgb(24, 160, 7)">Mi apellido es: {{apellido}}</p>
 
-    <h1>Excelente!!!!!!!.... Es muy facíl usar plantillas.</h1>
-    
+    <h5>Este template fue creado el: {{hoy}}</h5>
+    <h3>Estas son mis notas de la U:</h3>
+    <p>
+        {% for n in notas %}
+            {{n}}
+            <br>
+        {% endfor %}
+    </p>
+
+</div>    
 </body>
 </html>

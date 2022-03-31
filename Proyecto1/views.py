@@ -40,9 +40,13 @@ def miNombreEs(self, nombre):
 
 
 def probandoTemplate(self):
+    nom = "Gary"
+    ap = "Aguilera"
+    lista_notas = [2,2,3,7,2,5]
+    dicc = {"nombre": nom, "apellido": ap, "hoy": datetime.datetime.now(), "notas": lista_notas}
     miHtml = open("C:/Users/garun/Desktop/ProyectoCoder/Proyecto1/plantillas/template1.html")
     plantilla = Template(miHtml.read())  
     miHtml.close()
-    miContexto = Context()
+    miContexto = Context(dicc)
     documento = plantilla.render(miContexto)
     return HttpResponse(documento)
